@@ -11,15 +11,23 @@ html, body {
 
 section {
 	max-width: 960px;
-	margin: 30px auto 0 auto;
+	margin: 0 auto 20px auto;
 	padding: 20px;
-	@include background-image(linear-gradient(#faf6de, white ));
-	@include border-radius(0 0 10px 10px);
+	background: white;
+	@include box-shadow(0 0 5px 5px rgba(235, 231, 206, .6));
+	// @include border-radius(10px);
 }
 
-.row-fluid { margin-bottom: 20px; }
+.row-fluid {
+	margin-bottom: 20px;
+	&.row-header {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+}
 
-button {
+.btn {
 	position: relative;
 	padding: 4px 16px;
 	margin: 0 10px 0 0;

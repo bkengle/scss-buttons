@@ -1377,25 +1377,24 @@ html, body {
 /* line 12, ../scss/app.scss */
 section {
   max-width: 960px;
-  margin: 30px auto 0 auto;
+  margin: 0 auto 20px auto;
   padding: 20px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #faf6de), color-stop(100%, #ffffff));
-  background-image: -webkit-linear-gradient(#faf6de, #ffffff);
-  background-image: -moz-linear-gradient(#faf6de, #ffffff);
-  background-image: -o-linear-gradient(#faf6de, #ffffff);
-  background-image: linear-gradient(#faf6de, #ffffff);
-  -webkit-border-radius: 0 0 10px 10px;
-  -moz-border-radius: 0 0 10px 10px;
-  -ms-border-radius: 0 0 10px 10px;
-  -o-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px; }
+  background: white;
+  -webkit-box-shadow: 0 0 5px 5px rgba(235, 231, 206, 0.6);
+  -moz-box-shadow: 0 0 5px 5px rgba(235, 231, 206, 0.6);
+  box-shadow: 0 0 5px 5px rgba(235, 231, 206, 0.6); }
 
-/* line 20, ../scss/app.scss */
+/* line 21, ../scss/app.scss */
 .row-fluid {
   margin-bottom: 20px; }
+  /* line 23, ../scss/app.scss */
+  .row-fluid.row-header {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px; }
 
-/* line 22, ../scss/app.scss */
-button {
+/* line 30, ../scss/app.scss */
+.btn {
   position: relative;
   padding: 4px 16px;
   margin: 0 10px 0 0;
@@ -1412,8 +1411,8 @@ button {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px; }
-  /* line 35, ../scss/app.scss */
-  button.btn-blue {
+  /* line 43, ../scss/app.scss */
+  .btn.btn-blue {
     background-color: #0088cc;
     *zoom: 1;
     filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0088CC', endColorstr='#FF0044CC');
@@ -1428,10 +1427,15 @@ button {
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
     /* line 10, ../scss/_mixins.scss */
-    button.btn-blue:hover {
+    .btn.btn-blue:hover {
       background: #0044cc; }
     /* line 11, ../scss/_mixins.scss */
-    button.btn-blue.btn-hard-stop {
+    .btn.btn-blue.btn-hard-stop {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      border-radius: 0;
       background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwODhjYyIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMDA4OGNjIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDQ0Y2MiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDQ0Y2MiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
       background-size: 100%;
       background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0088cc), color-stop(50%, #0088cc), color-stop(50%, #0044cc), color-stop(100%, #0044cc));
@@ -1439,20 +1443,20 @@ button {
       background-image: -moz-linear-gradient(top, #0088cc 0%, #0088cc 50%, #0044cc 50%, #0044cc 100%);
       background-image: -o-linear-gradient(top, #0088cc 0%, #0088cc 50%, #0044cc 50%, #0044cc 100%);
       background-image: linear-gradient(top, #0088cc 0%, #0088cc 50%, #0044cc 50%, #0044cc 100%); }
-      /* line 13, ../scss/_mixins.scss */
-      button.btn-blue.btn-hard-stop:hover {
+      /* line 14, ../scss/_mixins.scss */
+      .btn.btn-blue.btn-hard-stop:hover {
         background: #0044cc; }
-  /* line 36, ../scss/app.scss */
-  button.full-wide {
+  /* line 44, ../scss/app.scss */
+  .btn.full-wide {
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-  /* line 40, ../scss/app.scss */
-  button.right-arrow {
+  /* line 48, ../scss/app.scss */
+  .btn.right-arrow {
     padding: 4px 26px 4px 16px; }
-    /* line 42, ../scss/app.scss */
-    button.right-arrow:after {
+    /* line 50, ../scss/app.scss */
+    .btn.right-arrow:after {
       position: absolute;
       top: 15%;
       right: 10px;
@@ -1461,13 +1465,13 @@ button {
       height: 15px;
       background: url(img/glyphicons-halflings-white.png) -458px -70px no-repeat;
       content: ''; }
-  /* line 53, ../scss/app.scss */
-  button.btn-large {
+  /* line 61, ../scss/app.scss */
+  .btn.btn-large {
     padding: 14px 16px 14px 16px;
     font-size: 16px; }
-    /* line 56, ../scss/app.scss */
-    button.btn-large.right-arrow {
+    /* line 64, ../scss/app.scss */
+    .btn.btn-large.right-arrow {
       padding: 14px 26px 14px 16px; }
-      /* line 58, ../scss/app.scss */
-      button.btn-large.right-arrow:after {
+      /* line 66, ../scss/app.scss */
+      .btn.btn-large.right-arrow:after {
         top: 30%; }
