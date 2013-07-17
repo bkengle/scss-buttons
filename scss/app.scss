@@ -1,0 +1,61 @@
+@import 'main',
+				'normalize',
+				'compass/css3',
+				'mixins',
+				'bootstrap.min';
+
+html, body {
+	background: #faf6de;
+	color: #544c4a;
+}
+
+section {
+	max-width: 960px;
+	margin: 30px auto 0 auto;
+	padding: 20px;
+	@include background-image(linear-gradient(#faf6de, white ));
+	@include border-radius(0 0 10px 10px);
+}
+
+.row-fluid { margin-bottom: 20px; }
+
+button {
+	position: relative;
+	padding: 4px 16px;
+	margin: 0 10px 0 0;
+	text-align: center;
+	color: white;
+	font: bold 13px/18px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	border: 1px solid #ccc;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	@include border-radius(3px);
+	&.btn-blue { @include btn-gradient(#0088cc, #0044cc); }
+	&.full-wide {
+		width: 100%;
+		@include box-sizing(border-box);
+	}
+	&.right-arrow {
+		padding: 4px 26px 4px 16px;
+		&:after {
+			position: absolute;
+			top: 15%;
+			right: 10px;
+			display: block;
+			width: 10px;
+			height: 15px;
+			background: url(img/glyphicons-halflings-white.png) -458px -70px no-repeat;
+			content: '';
+		}
+	}
+	&.btn-large {
+		padding: 14px 16px 14px 16px;
+		font-size: 16px;
+		&.right-arrow {
+			padding: 14px 26px 14px 16px;
+			&:after { top: 30%; }
+		}
+	}
+}

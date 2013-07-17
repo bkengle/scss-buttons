@@ -1,0 +1,15 @@
+// BUTTON STYLING FOR GRADIENTS AND HARD STOPS
+
+@mixin btn-gradient($top-color, $bottom-color) {
+  background-color: $top-color; // Old browsers
+  @include filter-gradient($top-color, $bottom-color, vertical); // IE6-9
+  // IE9 SVG, needs conditional override of 'filter' to 'none'
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top, $top-color 0%, $bottom-color 100%));
+  @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05));
+  &:hover { background: $bottom-color; }
+  &.btn-hard-stop {
+  	@include background-image(linear-gradient(top, $top-color 0%,$top-color 50%,$bottom-color 50%,$bottom-color 100%));
+  	&:hover { background: $bottom-color; }
+  }
+}
